@@ -1,6 +1,0 @@
-[submodule "m1"]
-	path = m1
-	url = https://github.com/YousifHmada/yellow-scrape-m1
-[submodule "m2"]
-	path = m2
-	url = https://github.com/YousifHmada/yellow-scrape-m2
