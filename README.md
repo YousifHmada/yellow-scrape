@@ -9,12 +9,31 @@
  1. **' m1 '** the **Api**
  2. **' m2 '** the **BackServer**
  3. PostgreDB hosted on cloud database as a service **[ElephantSql](https://api.elephantsql.com)**
+ 
+<a href="https://yellow-scrape-m1.herokuapp.com/explorer/">You can find the live demo of the Project here .</a>
 
 ## How It Works
    first the api should receive a get request with the name of the category as an input and some other options
 <br>then the api will make some calculations and send a post request to the **BackServer** including the name and the options required for that server to operate properly,
 <br>the second server then will make requests back to the **yellow pages** website crawling all the pages of specific category through multiple or one thread as specified from the Api post request,
 <br>after processing the responses came, if the Api requested **storing data** this server would send the request and **after** it will continue background calculations to store the results into the **PostgreDB**
+
+## Api Options & User Manual
+  - #### [Functions Model](https://yellow-scrape-m1.herokuapp.com/explorer/#!/functions/functions_crawl)
+    this model is responsible for the crawling and different options that should be sent to the second machine
+    -  name: the name of the category to be crawled.
+    -  allow_deep_digging: this should be false by default and when you allow it you tell the driver to do more complex crawling and extract much deeper data.
+    -  store_data: a flag to allow writing into the database.<br>
+    > This call could takes much time relatively to the nubmer of pages that certain category has and the deep_digging option specified in the Api call, for example a search for **fast food** category with the deep_digging option set to true take from 40ms to 59ms, so please be patient :smiley
+    <p align="center">
+         <img src="https://github.com/YousifHmada/yellow-scrape/blob/master/assets/Screenshot%20from%202017-12-17%2016-05-28.png?raw=true"/>
+    </p>
+  - #### [Shop Model](https://yellow-scrape-m1.herokuapp.com/explorer/#!/shop/shop_find)
+    this model is responsible for dealing with the database from the user perspective
+    <p align="center">
+         <img src="https://github.com/YousifHmada/yellow-scrape/blob/master/assets/Screenshot%20from%202017-12-17%2016-06-08.png?raw=true"/>
+    </p>
+    
 
 ## Tools & Frameworks
   -  ElephantSql@[ElephantSql.com](https://www.elephantsql.com/): ElephantSQL automates every part of setup and running of PostgreSQL clusters. Available on all major cloud and application platforms all over the world. ElephantSQL is offered by a small but stable, committed and hardworking team from Sweden. With 20,000+ running databases and several years of DBA PostgreSQL experience, we can help you with all questions you might have concerning your DB. Customers like Mr. Cooper, Blendle, and Cambridge Assessment just to mention a few, are feeling safe with us managing their DBs.
