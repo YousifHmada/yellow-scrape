@@ -10,6 +10,12 @@
  2. **' m2 '** the **BackServer**
  3. PostgreDB hosted on cloud database as a service **[ElephantSql](https://api.elephantsql.com)**
 
+## How It Works
+   first the api should receive a get request with the name of the category as an input and some other options
+<br>then the api will make some calculations and send a post request to the **BackServer** including the name and the options required for that server to operate properly,
+<br>the second server then will make requests back to the **yellow pages** website crawling all the pages of specific category through multiple or one thread as specified from the Api post request,
+<br>after processing the responses came, if the Api requested **storing data** this server would send the request and **after** it will continue background calculations to store the results into the **PostgreDB**
+
 ## Tools & Frameworks
   -  ElephantSql@[ElephantSql.com](https://www.elephantsql.com/): ElephantSQL automates every part of setup and running of PostgreSQL clusters. Available on all major cloud and application platforms all over the world. ElephantSQL is offered by a small but stable, committed and hardworking team from Sweden. With 20,000+ running databases and several years of DBA PostgreSQL experience, we can help you with all questions you might have concerning your DB. Customers like Mr. Cooper, Blendle, and Cambridge Assessment just to mention a few, are feeling safe with us managing their DBs.
   -  LoopBack@[LoopBack.com](https://loopback.io/): LoopBack is a highly-extensible, open-source Node.js framework that enables you to:
