@@ -22,16 +22,17 @@
   - #### [Functions Model](https://yellow-scrape-m1.herokuapp.com/explorer/#!/functions/functions_crawl)
     this model is responsible for the crawling and different options that should be sent to the second machine
     -  name: the name of the category to be crawled.
+    -  max_number_pages: the max number of pages to be crawled, leave it blank in case you want to crawl all pages
     -  allow_deep_digging: this should be false by default and when you allow it you tell the driver to do more complex crawling and extract much deeper data.
     -  store_data: a flag to allow writing into the database.<br>
     > This call could takes much time relatively to the nubmer of pages that certain category has and the deep_digging option specified in the Api call, for example a search for **fast food** category with the deep_digging option set to true take from 40ms to 59ms, so please be patient :smiley
     <p align="center">
-         <img src="https://github.com/YousifHmada/yellow-scrape/blob/master/assets/Screenshot%20from%202017-12-17%2016-05-28.png?raw=true"/>
+         <img src="https://raw.githubusercontent.com/YousifHmada/yellow-scrape/master/assets/Screenshot%20from%202017-12-18%2014-31-07.png"/>
     </p>
   - #### [Shop Model](https://yellow-scrape-m1.herokuapp.com/explorer/#!/shop/shop_find)
     this model is responsible for dealing with the database from the user perspective
     <p align="center">
-         <img src="https://github.com/YousifHmada/yellow-scrape/blob/master/assets/Screenshot%20from%202017-12-17%2016-06-08.png?raw=true"/>
+         <img src="https://raw.githubusercontent.com/YousifHmada/yellow-scrape/master/assets/Screenshot%20from%202017-12-18%2014-31-23.png"/>
     </p>
     
 
