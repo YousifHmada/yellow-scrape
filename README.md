@@ -25,7 +25,7 @@
     -  max_number_pages: the max number of pages to be crawled, leave it blank in case you want to crawl all pages
     -  allow_deep_digging: this should be false by default and when you allow it you tell the driver to do more complex crawling and extract much deeper data.
     -  store_data: a flag to allow writing into the database.<br>
-    > This call could takes much time relatively to the nubmer of pages that certain category has and the deep_digging option specified in the Api call, for example a search for **fast food** category with the deep_digging option set to true take from 40ms to 59ms, so please be patient :smiley
+    > This call could takes much time relatively to the nubmer of pages that certain category has and the deep_digging option specified in the Api call, for example a search for **fast food** category with the deep_digging option set to true take from 40s to 59s, so please be patient :smiley
     <p align="center">
          <img src="https://raw.githubusercontent.com/YousifHmada/yellow-scrape/master/assets/Screenshot%20from%202017-12-18%2014-31-07.png"/>
     </p>
